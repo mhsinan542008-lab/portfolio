@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Muhammed Sinan — macro and nature photography portfolio.">
+  <title>Muhammed Sinan Photography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="row mono"><span>Muhammed Sinan</span><span>Loading frames</span></div>
+  <div class="flash"><img id="flashImg" alt=""></div>
+  <div class="count" id="count">000</div>
+</div>
+
+<div class="grain" id="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><div class="ring"><span id="cursorLabel">View</span></div><div class="dot"></div></div>
+<div class="preview" id="preview" aria-hidden="true"><img alt="" id="previewImg"></div>
+
+<nav class="nav mono" aria-label="Main">
+  <a class="brand" href="#top" data-scroll>M.Sinan</a>
+  <span class="clock" id="clock">India —</span>
+  <ul>
+    <li><a class="lnk" href="#work" data-scroll><span>Work</span><span>Work</span></a></li>
+    <li><a class="lnk" href="#library" data-scroll><span>Library</span><span>Library</span></a></li>
+    <li><a class="lnk" href="#about" data-scroll><span>About</span><span>About</span></a></li>
+    <li><a class="lnk" href="#contact" data-scroll><span>Contact</span><span>Contact</span></a></li>
+  </ul>
+</nav>
+
+<main id="top">
+  <header class="hero wrap" id="hero">
+    <div class="trail" id="trail"></div>
+    <h1 class="hero-name" aria-label="Muhammed Sinan">
+      <span class="line" aria-hidden="true">Muhammed</span>
+      <span class="line" aria-hidden="true">Sinan</span>
+    </h1>
+    <div class="hero-meta">
+      <p>Macro and nature photographer. Garden lizards, jumping spiders, flies that hold still for half a second, flowers after the rain, and the occasional full moon.</p>
+      <span class="mono">27 frames / 4 series</span>
+      <span class="mono hint" id="hint">Move your cursor to develop the roll</span>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Macro <i></i> <em>Flora</em> <i></i> Reptiles <i></i> <em>Night Sky</em> <i></i> Bugs <i></i> <em>After Rain</em> <i></i></span>
+      <span>Macro <i></i> <em>Flora</em> <i></i> Reptiles <i></i> <em>Night Sky</em> <i></i> Bugs <i></i> <em>After Rain</em> <i></i></span>
+    </div>
+  </div>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="sec-head wrap">
+      <h2 id="work-h">Selected<br>frames<sup>08</sup></h2>
+      <p>A short reel of favourites. Scroll and the roll moves sideways; click any frame to open it full size.</p>
+    </div>
+    <div class="reel" id="reel">
+      <div class="reel-track" id="reelTrack"></div>
+    </div>
+  </section>
+
+  <section id="library" class="wrap" aria-labelledby="lib-h">
+    <div class="sec-head" style="padding-inline:0">
+      <h2 id="lib-h">Photo<br>library<sup id="libCount">27</sup></h2>
+      <p>Every frame, sorted by what's in it. Filter by series, or switch to the index to read it like a contact sheet.</p>
+    </div>
+    <div class="lib-bar">
+      <div class="filters" id="filters" role="group" aria-label="Filter by series"></div>
+      <div class="views" role="group" aria-label="Layout">
+        <button type="button" id="vGrid" aria-pressed="true">Grid</button>
+        <button type="button" id="vIndex" aria-pressed="false">Index</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <ol class="index" id="index"></ol>
+  </section>
+
+  <section id="about" class="about wrap" aria-labelledby="about-h">
+    <div class="ph"><img src="t/p24.jpg" alt="A butterfly resting in an open palm, garden behind" id="aboutImg" loading="lazy"></div>
+    <div>
+      <div class="mono eyebrow">About</div>
+      <h2 class="big" id="about-h">I get close to small things and <em>wait</em> for them to look back.</h2>
+      <div class="body">
+        <p>I'm Muhammed Sinan, a photographer drawn to the world at ground level. Most of these frames were made crouched in a garden: a lizard pausing on a stem, a jumping spider peering over a leaf, rain still sitting on an allamanda petal.</p>
+        <p>I shoot in natural light and keep the edit honest, so the colour you see is the colour that was there. When the sky is clear, I point the lens up instead.</p>
+      </div>
+      <div class="series" id="series"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact wrap" aria-labelledby="hello-h">
+    <div class="mono" style="color:var(--mute);margin-bottom:18px">Prints, collaborations, or just to talk about bugs</div>
+    <h2 class="hello" id="hello-h" aria-label="Say hello"><span class="w" aria-hidden="true">Say</span><span class="w" aria-hidden="true">hello</span></h2>
+    <div class="mail">
+      <span class="addr" id="addr">mhsinan542008@gmail.com</span>
+      <button class="btn" type="button" id="copyBtn" data-cursor="Copy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="8" width="12" height="12" rx="1"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>
+        <span id="copyTxt">Copy email</span>
+      </button>
+    </div>
+    <div class="socials">
+      <a href="https://instagram.com/itz_sinan" target="_blank" rel="noopener"><span>Instagram</span><span class="mono">@itz_sinan ↗</span></a>
+      <a href="https://x.com/search?q=muhammed%20sinan&amp;f=user" target="_blank" rel="noopener"><span>X</span><span class="mono">Muhammed Sinan ↗</span></a>
+      <a href="https://youtube.com/@sinanphotograph" target="_blank" rel="noopener"><span>YouTube</span><span class="mono">@sinanphotograph ↗</span></a>
+    </div>
+    <footer class="mono">
+      <span>© 2026 Muhammed Sinan. All photographs by the author.</span>
+      <button type="button" id="toTop">Back to top ↑</button>
+    </footer>
+  </section>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lb-top mono">
+    <span id="lbCount">01 / 27</span>
+    <button class="lb-close mono" type="button" id="lbClose">Close ✕</button>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <button class="lb-nav prev" type="button" id="lbPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <img id="lbImg" alt="">
+    <button class="lb-nav next" type="button" id="lbNext" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <div class="lb-bot">
+    <div class="lb-cap"><span class="lb-title" id="lbTitle"></span><span class="mono" id="lbMeta" style="color:var(--mute)"></span></div>
+    <div class="lb-cap" style="margin-top:8px"><p id="lbNote"></p></div>
+    <div class="strip" id="strip"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
